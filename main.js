@@ -15,6 +15,7 @@ $(document).ready(function(){
         navigator.geolocation.getCurrentPosition(getWeather, displayError);
     } else {
         $("#geolocation-info").html("Geolocation is not supported by this browser.");
+        $("#loading").fadeOut(200);
     }
   }
 
@@ -45,7 +46,8 @@ $(document).ready(function(){
 
   function displayError(error){
     if (error.code == error.PERMISSION_DENIED)
-      $("#geolocation-info").html("You need to enable location services to see your local weather.");
+      $("#geolocation-info").html("You need to enable location services to see your local weather. Reload and try again!");
+      $("#loading").fadeOut(200);
   }
 
   function generateIcon(desc) {
