@@ -35,7 +35,7 @@ $(document).ready(function(){
         $("#temp").html(Math.floor(data.main.temp) + " °");
         $("#main").html(data.weather[0].main);
         $("#unit").html(unit);
-        generateIcon(data.weather[0].description);
+        generateIcon(data.weather[0].main);
         $(".info-container").fadeIn(400);
       },
       error: function(err){
