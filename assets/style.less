@@ -1,5 +1,4 @@
 html, body {
-  height: 100%;
   margin: 0;
   padding : 0;
   color : white;
@@ -19,11 +18,18 @@ html, body {
 }
 
 .cover-bg {
-  position: relative;
-  @media screen and (min-width: 1200px){
-    background : rgba(0,0,0,0.6); 
-  }  
+  background : rgba(0,0,0,0.6); 
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
   z-index: 1;
+}
+
+.main-container {
+  position: relative;
+  z-index:2;
 }
 
 .full-height {
