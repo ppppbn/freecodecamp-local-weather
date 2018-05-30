@@ -23,8 +23,8 @@ $(document).ready(function(){
     $.ajax({
       url : "https://fcc-weather-api.glitch.me/api/current/",
       data : {
-        lat : position.coords.latitude,
-        lon : position.coords.longitude
+        lat : position.coords.latitude.toFixed(8),
+        lon : position.coords.longitude.toFixed(8)
       },
       type : "GET",
       success: function(data){
