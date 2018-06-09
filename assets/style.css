@@ -5,7 +5,7 @@ body {
   color: white;
   min-height: 100%;
   font-family: Montserrat;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.4);
   position: relative;
 }
 html {
@@ -13,7 +13,7 @@ html {
 }
 body:after {
   min-height: 100%;
-  background-image: url(img/background.jpeg);
+  background-image: url("https://source.unsplash.com/random");
   background-size: cover;
   content: "";
   display: block;
@@ -36,13 +36,18 @@ body:after {
   z-index: 0;
 }
 .cover-bg {
-  background: rgba(0, 0, 0, 0.6);
+  background: #000000;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   position: absolute;
   top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  z-index: 1;
+  z-index: 3;
 }
 .main-container {
   position: relative;
@@ -367,4 +372,61 @@ html *:after {
     background: #fff;
     opacity: 0.2;
   }
+}
+@-webkit-keyframes Animation {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    ackground-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    ackground-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+@-moz-keyframes Animation {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    ackground-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    ackground-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+@keyframes Animation {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    ackground-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    ackground-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.animated-background {
+  animation: Animation 5s ease infinite;
+  -webkit-animation: Animation 5s ease infinite;
+  -moz-animation: Animation 5s ease infinite;
+  background-size: 200% 200%;
 }
