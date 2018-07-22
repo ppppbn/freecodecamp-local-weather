@@ -108,12 +108,12 @@ span {
   font-size: 30px;
 }
 #unit {
-  color: #006dcc;
+  color: #62afe4;
   cursor: pointer;
   text-transform: uppercase;
 }
 #unit:hover {
-  color: #005096;
+  color: #45a4e6;
 }
 #main {
   text-transform: capitalize;
