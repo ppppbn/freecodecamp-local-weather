@@ -18,63 +18,76 @@
     <div class="container-fluid main-container full-height">
       <div class="row">
         <div class="col-xs-12 custom-no-padding">
-          <div class="title-container text-center">
+          <div class="col-xs-12 title-container text-center">
             <h1 class="hidden-xs">What's the weather like today?</h1>
             <h1 class="hidden-sm hidden-md hidden-lg">Your Local Weather</h4>
           </div>
-          
-          <h4 id="geolocation-info" class="text-center text-white"></h4>
-          <div class="custom-display-flex horizontal-center" id="loading">
-            <div class="ajax-loader"></div>
+
+          <div class="form-container text-center col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+            <form id="search-form">
+              <div class="search-input-wrapper">
+                <input class="search-input" placeholder="Enter city name..." id="search-input"/>
+              </div>
+              <div class="search-btn-wrapper">
+                <button class="btn search-btn">Search</button>
+              </div>
+            </form>
           </div>
-          <div class="info-container text-center">
-            <h2 id="country"></h2>
-            <span id="temp"></span>
-            <span id="unit"></span>
-            <h2 id="main"></h2>
-            <div class="text-center icon-container">
-              <div class="icon sun-shower hide" id="drizzle">
-                <div class="cloud"></div>
-                <div class="sun">
-                  <div class="rays"></div>
-                </div>
-                <div class="rain"></div>
-              </div>
-              
-              <div class="icon thunder-storm hide" id="thunderstom">
-                <div class="cloud"></div>
-                <div class="lightning">
-                  <div class="bolt"></div>
-                  <div class="bolt"></div>
-                </div>
-              </div>
-              
-              <div class="icon cloudy hide" id="clouds">
-                <div class="cloud"></div>
-                <div class="cloud"></div>
-              </div>
-              
-              <div class="icon flurries hide" id="snow">
-                <div class="cloud"></div>
-                <div class="snow">
-                  <div class="flake"></div>
-                  <div class="flake"></div>
-                </div>
-              </div>
-              
-              <div class="icon sunny hide" id="clear">
-                <div class="sun">
-                  <div class="rays"></div>
-                </div>
-              </div>
-              
-              <div class="icon rainy hide" id="rain">
-                <div class="cloud"></div>
-                <div class="rain"></div>
-              </div>
+
+          <div class="col-xs-12">
+            <h4 id="geolocation-info" class="text-center text-white"></h4>
+            <div class="custom-display-flex horizontal-center" id="loading">
+              <div class="ajax-loader"></div>
             </div>
-            <div class="note-container text-center">
-              <p>Note : This website is using a weather API from FreeCodeCamp with low accuracy.</p>
+            <div class="error-container text-center">
+              <h3 id="error-message"></h3>
+            </div>
+            <div class="info-container text-center">
+              <h2 id="country"></h2>
+              <span id="temp"></span>
+              <span id="unit"></span>
+              <h2 id="main"></h2>
+              <div class="text-center icon-container">
+                <div class="icon sun-shower hide" id="drizzle">
+                  <div class="cloud"></div>
+                  <div class="sun">
+                    <div class="rays"></div>
+                  </div>
+                  <div class="rain"></div>
+                </div>
+                
+                <div class="icon thunder-storm hide" id="thunderstom">
+                  <div class="cloud"></div>
+                  <div class="lightning">
+                    <div class="bolt"></div>
+                    <div class="bolt"></div>
+                  </div>
+                </div>
+                
+                <div class="icon cloudy hide" id="clouds">
+                  <div class="cloud"></div>
+                  <div class="cloud"></div>
+                </div>
+                
+                <div class="icon flurries hide" id="snow">
+                  <div class="cloud"></div>
+                  <div class="snow">
+                    <div class="flake"></div>
+                    <div class="flake"></div>
+                  </div>
+                </div>
+                
+                <div class="icon sunny hide" id="clear">
+                  <div class="sun">
+                    <div class="rays"></div>
+                  </div>
+                </div>
+                
+                <div class="icon rainy hide" id="rain">
+                  <div class="cloud"></div>
+                  <div class="rain"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>      

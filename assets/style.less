@@ -23,7 +23,7 @@ body:after {
   left: 0;
   right: 0px;
   bottom : 0px;
-  opacity : 0.6;
+  opacity : 0.4;
   z-index: -1;
 }
 
@@ -76,7 +76,7 @@ body:after {
 }
 
 .title-container {
-  margin : 50px;
+  margin : 50px 0px;
   color : white;
 }
 
@@ -95,6 +95,7 @@ body:after {
   width: 50px;
   height: 50px;
   background-size: 100% 100%;
+  margin-top: 40px;
 }
 
 #geolocation-info {
@@ -444,4 +445,56 @@ html *:after { box-sizing: inherit; }
   -webkit-animation: Animation 5s ease infinite;
   -moz-animation: Animation 5s ease infinite;
   background-size: 200% 200%;
+}
+
+.search-input {
+  &::placeholder {
+    color: #ccc;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder { 
+    color: #ccc;
+  }
+
+  &::-ms-input-placeholder {
+    color: #ccc;
+  }
+  width: 250px;
+  display: inline-block;
+  height: 34px;
+  padding: 5px;
+  padding-left: 10px;
+  border-radius: 5px;
+  background: transparent;
+  margin-right: 15px;
+  border: 1px solid white;
+  transition: all 0.3s ease;
+  &:focus {
+    outline: none !important;
+    border: 1px solid #aaa;
+  }
+
+  @media screen and (max-width: 400px){
+    width: 200px
+  }
+}
+
+.search-input-wrapper {
+  display: inline-block;
+}
+
+.search-btn-wrapper {
+  display: inline-block;
+}
+
+.search-btn {
+  color: #ccc;
+  background: transparent;
+  border: 1px solid white;
+  transition: all 0.3s ease;
+  &:hover, &:focus {
+    color: #ccc;
+    border: 1px solid #aaa;
+  }
 }
