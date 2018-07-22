@@ -459,7 +459,7 @@ html *:after {
 }
 @media screen and (max-width: 400px) {
   .search-input {
-    width: 200px;
+    width: 180px;
   }
 }
 .search-input-wrapper {
