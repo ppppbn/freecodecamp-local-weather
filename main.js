@@ -3,7 +3,7 @@ var unit = "c";
 var degreeInCelcius = 0;
 var degreeInFahrenheit = 0;
 const APP_ID = "030bd2c5e874b35251001c10b023f1eb";
-const API_URL = "http://api.openweathermap.org/data/2.5/weather";
+const API_URL = "https://api.openweathermap.org/data/2.5/weather";
 const DEFAULT_UNIT = "metric"
 const DEFAULT_COUNTRY = "Hanoi";
 
